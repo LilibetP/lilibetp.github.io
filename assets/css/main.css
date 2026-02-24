@@ -188,10 +188,20 @@ body {
   max-width: 720px;
   padding: 0 20px;
 }
+.video-container video {
+  width: 60%;    /* Ajusta este valor al tamaño deseado */
+  max-width: 720px;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centra el video */
+}
 
 video {
   width: 100%;
+  max-width: 800px;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  display: block;
+  margin: 0 auto;
 }
