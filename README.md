@@ -10,8 +10,8 @@ Hi! 👋 I'm a Computer Engineering student from Chile. This portfolio showcases
 
 ## 🌐 Demo
 
-👉 [Ver portafolio en línea](https://lilitha04.github.io)  
-👉 [View portfolio online](https://lilitha04.github.io)
+👉 [Ver portafolio en línea](https://lilibetp.github.io)  
+👉 [View portfolio online](https://lilibetp.github.io)
 
 ---
 
