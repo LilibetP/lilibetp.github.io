@@ -22,13 +22,13 @@
 
   <title>Lilibet Parada | Ingeniera en Informática | Portfolio</title>
 
-  <meta name="description" content="Portfolio profesional de Lilibet Parada, Ingeniera en Informática especializada en desarrollo web, soluciones digitales y buenas prácticas de ingeniería de software.">
+  <meta name="description" content="Portfolio profesional de Lilibet Parada, Ingeniera en Informática especializada en desarrollo web con React y Firebase, soluciones digitales y buenas prácticas de ingeniería de software.">
   <meta name="author" content="Lilibet Parada">
 
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
- 
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -36,11 +36,64 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Estilos de la sección de proyectos (puedes moverlos a main.css) -->
+  <style>
+    #proyectos .project-card + .project-card { margin-top: 2.5rem; }
+
+    .project-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .5rem .75rem;
+      margin-bottom: .25rem;
+    }
+    .project-header h3 { margin: 0; }
+
+    .project-badge {
+      font-size: .8rem;
+      font-weight: 500;
+      padding: .2rem .65rem;
+      border-radius: 999px;
+      border: 1px solid var(--bs-border-color);
+      color: var(--bs-secondary-color);
+    }
+    .project-badge.live {
+      color: var(--bs-success);
+      border-color: var(--bs-success);
+    }
+
+    .project-meta {
+      color: var(--bs-secondary-color);
+      font-size: .9rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .project-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: .5rem;
+      border: 1px solid var(--bs-border-color);
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1.5rem;
+    }
+  </style>
+
 </head>
 
 
 <body class="index-page">
-  
+
   <main class="main">
 
     <section id="hero" class="hero section">
@@ -56,14 +109,14 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="assets/pdf/Lilibet-P-Ing-Informatica-CV.pdf" 
-            target="_blank" 
+          <a href="assets/pdf/Lilibet-P-Ing-Informatica-CV.pdf"
+            target="_blank"
             class="btn btn-primary">
             Ver CV
           </a>
 
-          <a href="assets/pdf/Lilibet-P-Ing-Informatica-CV.pdf" 
-            download 
+          <a href="assets/pdf/Lilibet-P-Ing-Informatica-CV.pdf"
+            download
             class="btn btn-outline">
             Descargar CV
           </a>
@@ -72,28 +125,90 @@
       </div>
     </section>
 
-        <!-- ========================= -->
-    <!-- PROYECTO GEDANI -->
+    <!-- ========================= -->
+    <!-- PROYECTOS -->
     <!-- ========================= -->
     <section id="proyectos" class="section">
       <div class="container">
 
-        <h2 class="section-title">Proyecto Destacado</h2>
+        <h2 class="section-title">Proyectos</h2>
 
-        <div class="project-card">
+        <!-- ===== NUSVIA ===== -->
+        <article class="project-card" id="nusvia">
 
-          <h3>GEDANI – Digitalización de Informes en Terreno</h3>
-          
+          <div class="project-header">
+            <h3>Nusvia – Plataforma SaaS multi-tenant</h3>
+            <span class="project-badge live">En producción</span>
+          </div>
+          <p class="project-meta">Proyecto personal · desde marzo 2026</p>
+
           <p class="project-description">
-          GEDANI es una aplicación web desarrollada como proyecto de título para 
-          resolver la ineficiencia en la recopilación manual de informes en terreno. 
-          Los inspectores registraban datos a mano, generando pérdida de información, 
-          errores de transcripción y reportes incompletos.
+            Nusvia es una plataforma web que diseñé y desarrollé para atender a
+            distintos clientes desde una misma aplicación, manteniendo cada
+            organización independiente de las demás. Hoy está funcionando y en
+            uso real con su primer cliente.
+          </p>
 
-          La solución digitaliza el proceso mediante formularios estructurados, 
-          almacenamiento en Firebase y autenticación segura. 
-          Permite centralizar la información en tiempo real, 
-          mejorando trazabilidad y reduciendo ambigüedades en los reportes.
+          <p class="project-description">
+            Es el proyecto con el que sigo profundizando en arquitectura y
+            desarrollo de aplicaciones listas para producción.
+          </p>
+
+          <div class="tech-stack">
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>Vite</span>
+            <span>Tailwind</span>
+            <span>Firebase</span>
+          </div>
+
+          <div class="project-impact">
+            <p><strong>Qué demuestra este proyecto:</strong></p>
+            <ul>
+              <li>Arquitectura multi-tenant: una sola plataforma para múltiples clientes</li>
+              <li>Cada cliente accede desde su propio subdominio (por ejemplo, villalosrobles.nusvia.cl)</li>
+              <li>Aplicación en uso real, con un cliente activo</li>
+              <li>Desarrollo completo con React y Firebase, desde la interfaz hasta el backend</li>
+            </ul>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://nusvia.cl" target="_blank" rel="noopener" class="btn btn-primary">
+              Visitar nusvia.cl
+            </a>
+            <a href="https://villalosrobles.nusvia.cl" target="_blank" rel="noopener" class="btn btn-outline">
+              Ver primer cliente en producción
+            </a>
+          </div>
+
+          <div class="project-gallery">
+            <img src="assets/img/nusvia1.webp" alt="Panel principal de Nusvia" loading="lazy">
+            <img src="assets/img/nusvia3.webp" alt="Gestión por cliente en Nusvia" loading="lazy">
+          </div>
+          
+
+        </article>
+
+        <!-- ===== GEDANI ===== -->
+        <article class="project-card" id="gedani">
+
+          <div class="project-header">
+            <h3>GEDANI – Digitalización de informes en terreno</h3>
+            <span class="project-badge">Proyecto de título</span>
+          </div>
+          <p class="project-meta">Ingeniería en Informática, UTEM</p>
+
+          <p class="project-description">
+            Aplicación web que resuelve la ineficiencia en la recopilación manual
+            de informes en terreno. Los inspectores registraban datos a mano, lo que
+            generaba pérdida de información, errores de transcripción y reportes incompletos.
+          </p>
+
+          <p class="project-description">
+            La solución digitaliza el proceso con formularios estructurados,
+            almacenamiento en Firebase y autenticación segura. Centraliza la
+            información en tiempo real, mejora la trazabilidad y reduce las
+            ambigüedades en los reportes.
           </p>
 
           <div class="tech-stack">
@@ -102,48 +217,40 @@
             <span>Firebase</span>
             <span>HTML</span>
             <span>CSS</span>
-
-            <div class="project-impact">
-               <p><strong>Impacto esperado:</strong></p>
-               <ul>
-                <li>Reducción de errores de transcripción</li>
-                <li>Centralización de datos en tiempo real</li>
-                <li>Mejora en trazabilidad de informes</li>
-              </ul>
-            </div>
-          
           </div>
 
-        </div>
+          <div class="project-impact">
+            <p><strong>Impacto esperado:</strong></p>
+            <ul>
+              <li>Reducción de errores de transcripción</li>
+              <li>Centralización de datos en tiempo real</li>
+              <li>Mejora en la trazabilidad de informes</li>
+            </ul>
+          </div>
 
-        
+          <div class="project-gallery">
+            <img src="assets/img/gedani3.webp" alt="Panel principal de GEDANI" loading="lazy">
+            <img src="assets/img/gedani5.webp" alt="Pantalla para crear un informe en GEDANI" loading="lazy">
+          </div>
 
-      </div>
-    </section>
-    
-    <!-- ========================= -->
-    <!-- GALERÍA -->
-    <!-- ========================= -->
-    <section id="galeria-gedani" class="section alt">
-      <div class="container">
+          <div class="project-actions">
+            <button class="btn btn-outline" type="button"
+              data-bs-toggle="collapse" data-bs-target="#gedani-demo"
+              aria-expanded="false" aria-controls="gedani-demo">
+              Ver demo en video
+            </button>
+          </div>
 
-        <h2 class="section-title">Galería del Proyecto</h2>
+          <div class="collapse mt-3" id="gedani-demo">
+            <div class="video-container">
+              <video controls preload="none">
+                <source src="assets/video/gedani-demo.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+              </video>
+            </div>
+          </div>
 
-        <div class="gallery">
-          <img src="assets/img/gedani1.webp" alt="Pantalla login GEDANI">
-          <img src="assets/img/gedani2.webp" alt="Formulario de registro">
-          <img src="assets/img/gedani3.webp" alt="Panel principal">
-          <img src="assets/img/gedani4.webp" alt="Ver reportes">
-          <img src="assets/img/gedani5.webp" alt="Crear informe">
-        
-        </div>
-
-        <div class="video-container">
-          <video controls>
-            <source src="assets/video/gedani-demo.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-          </video>
-        </div>
+        </article>
 
       </div>
     </section>
@@ -151,15 +258,15 @@
     <!-- ========================= -->
     <!-- SOBRE MÍ -->
     <!-- ========================= -->
-    <section id="sobre-mi" class="section">
+    <section id="sobre-mi" class="section alt">
       <div class="container">
 
-        <h2 class="section-title">Sobre Mí</h2>
+        <h2 class="section-title">Sobre mí</h2>
 
         <p>
           Ingeniera en Informática enfocada en desarrollar soluciones digitales
-          para optimizar procesos empresariales. Interesada en tecnologías web,
-          automatización y desarrollo frontend con React.
+          para optimizar procesos empresariales. Hoy construyo aplicaciones web
+          con React y Firebase, como GEDANI y Nusvia, esta última ya en producción.
         </p>
 
         <p>
@@ -173,14 +280,14 @@
     <!-- ========================= -->
     <!-- CONTACTO -->
     <!-- ========================= -->
-    <section id="contacto" class="section alt">
+    <section id="contacto" class="section">
       <div class="container">
 
         <h2 class="section-title">Contacto</h2>
 
-        <p><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:lilibethparada@gmail.com">lilibethparada@gmail.com</a></p>        
-        <p><i class="bi bi-github"></i> GitHub: <a href="https://github.com/LilibetP" target="_blank">github.com/LilibetP</a></p>
-        <p><i class="bi bi-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/lilibet-parada-mu%C3%B1oz/" target="_blank">https://www.linkedin.com/in/lilibet-parada-muñoz/</a></p>
+        <p><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:lilibethparada@gmail.com">lilibethparada@gmail.com</a></p>
+        <p><i class="bi bi-github"></i> GitHub: <a href="https://github.com/LilibetP" target="_blank" rel="noopener">github.com/LilibetP</a></p>
+        <p><i class="bi bi-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/lilibet-parada/" target="_blank" rel="noopener">linkedin.com/in/lilibet-parada</a></p>
 
       </div>
     </section>
@@ -195,18 +302,18 @@
         <cite title="Alan Kay">Alan Kay</cite>
       </footer>
     </blockquote>
-  
+
     <div class="social-links d-flex justify-content-center gap-4 mb-3">
-      <a href="https://github.com/Lilibetp/" target="_blank" class="fs-4">
+      <a href="https://github.com/LilibetP" target="_blank" rel="noopener" class="fs-4" aria-label="GitHub">
         <i class="bi bi-github"></i>
       </a>
-      <a href="https://www.linkedin.com/in/lilibet-parada-mu%C3%B1oz/" target="_blank" class="fs-4">
+      <a href="https://www.linkedin.com/in/lilibet-parada/" target="_blank" rel="noopener" class="fs-4" aria-label="LinkedIn">
         <i class="bi bi-linkedin"></i>
       </a>
     </div>
-    
+
     <small class="text-body-secondary">
-      © 2025 Lilibet Parada. Construido con Bootstrap.
+      © 2026 Lilibet Parada. Construido con Bootstrap.
     </small>
 
   </footer>
